@@ -27,11 +27,11 @@ var passwordSource = [];
     // has at least 8 characters
 var passNumber = parseInt(prompt("How many character do you want in your password? Must have at least 8 and no more than 128.", ""));
 
-while (isNaN(passNumber) || passNumber > 129 || passNumber < 8) {
+while (isNaN(passNumber) || passNumber > 128 || passNumber < 8) {
   //enter if else for various incorrect entries 
 
   passNumber = parseInt(prompt("How many character do you want in your password? Must have at least 8 and no more than 128.", ""))
-
+  console.log(passNumber)
 }
 /*
 //if (passNumber < 129 && passNumber > 8) {
@@ -70,9 +70,12 @@ generateBtn.addEventListener("click", writePassword);
 
 // generate password funciton 
 function generatePassword () {
-  var builtPassword = "";
+  var builtPassword = ""
   for (var i = 0; i < passNumber; i++) {
-    Math.floor(Math.random()*passwordSource.length)
-    
+   var randomIndex = Math.floor(Math.random()*passwordSource.length)
+    var randomChar = passwordSource[randomIndex]
+    builtPassword = builtPassword.concat(randomChar)
+    console.log(builtPassword)
   }
+return builtPassword
 }
