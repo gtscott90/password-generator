@@ -10,28 +10,18 @@ function writePassword() {
 
 }
 // Arrays of possible password characters 
-
-// number characters list as a string (between double quotes): "0123456789"
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-// lower case characters list as a string (between double quotes): "abcdefghijklmnopqrstuvwxyz"
 var lowCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-// upper case characters list as a string (between double quotes): "ABCDEFGIHJKLMNOPQRSTUVWXYZ"
 var upCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-// special characters list as string (between double quotes): " !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 var specChar = [' ', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '`', '{', '}', '|', '~'];
-
 // user generated array for characters to include in password
 var passwordSource = [];
 
-// prompt how many characters
-    // has at least 8 characters
+// prompt how many characters with at least 8 and no more than 128
 var passNumber = parseInt(prompt("How many character do you want in your password? Must have at least 8 and no more than 128.", ""));
-
 while (isNaN(passNumber) || passNumber > 128 || passNumber < 8) {
   //enter if else for various incorrect entries 
-
   passNumber = parseInt(prompt("How many character do you want in your password? Must have at least 8 and no more than 128.", ""))
-  console.log(passNumber)
 }
 /*
 //if (passNumber < 129 && passNumber > 8) {
