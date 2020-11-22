@@ -11,9 +11,9 @@ Users can load this page and see prompt to enter the number of characters they d
 Initial prompt when opening the website:
 ![Initial Prompt](./Assets/Images/initial-prompt.png)
 Series of confirmations that let user select style of characters:
-![Character Selection Confirmations](.Assets/Images/confirm-character-criteria.png)
+![Character Selection Confirmations](./Assets/Images/confirm-character-criteria.png)
 Random Password Generated:
-![Random Password](.Assets/Images/random-password.png)
+![Random Password](./Assets/Images/random-password.png)
 
 ### Links
 Link to github reposity: https://github.com/gtscott90/password-generator 
