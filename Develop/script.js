@@ -23,15 +23,6 @@ while (isNaN(passNumber) || passNumber > 128 || passNumber < 8) {
   //enter if else for various incorrect entries 
   passNumber = parseInt(prompt("How many character do you want in your password? Must have at least 8 and no more than 128.", ""))
 }
-/*
-//if (passNumber < 129 && passNumber > 8) {
- //   console.log(passNumber);
-} else if (isNaN(passNumber)) {
-    parseInt(prompt("You did not enter a number. Please enter a number from 8 to 128.", ""));
-} else {
-    parseInt(prompt("Your number (" + passNumber + ") is either less than 8 or more than 128. Please enter a number from 8 to 128.", ""));
-}
-*/
 // confirm special characters
 var specCharConfirm = confirm("Click OK to include special characters in your password.") 
   if (specCharConfirm) {
@@ -52,7 +43,7 @@ var numbersConfirm = confirm("Click OK to include numbers in your password.")
   if (numbersConfirm) {
     passwordSource = passwordSource.concat(numbers);
   } 
-// at least one type of character must be selected 
+
 
 
 // Add event listener to generate button
@@ -67,5 +58,11 @@ function generatePassword () {
     builtPassword = builtPassword.concat(randomChar)
     console.log(builtPassword)
   }
+// at least one type of character must be selected 
+if (builtPassword == "") {
+  return alert("You must select at least one type of character to include in your password")
+}
 return builtPassword
+
+
 }
